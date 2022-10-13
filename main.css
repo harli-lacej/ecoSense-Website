@@ -1,7 +1,7 @@
 :root {
     --ecoSense-green:#abc964;
     --ecosense-dgreen:rgb(48, 199, 140);
-    --ecoSense-red:rgb(230, 115, 107);
+    --ecoSense-red:#e6736b;
     --ecoSense-orange:rgb(242, 189, 83);
     --ecoSense-grey:rgb(146, 142, 127);
     --background:white;
@@ -17,10 +17,26 @@ body{
     background-color:var(--background);
     background-image: url("background.png");
     background-repeat:no-repeat;
-    background-position: 50% 50%;
+    /*background-position: 50% 50%;*/
     background-position: center;
     background-size: cover;
 }
+
+body::-webkit-scrollbar {
+    width: 12px;               /* width of the entire scrollbar */
+}
+  
+body::-webkit-scrollbar-track {
+    background:var(--ecoSense-grey);        /* color of the tracking area */
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color:white;    /* color of the scroll thumb */
+    border-radius: 10px;       /* roundness of the scroll thumb */
+    border: 3px solid var(--ecoSense-grey);  /* creates padding around scroll thumb */
+    height:30px;
+}
+  
 
 .nav-bar{
     margin:0 auto;
@@ -150,17 +166,6 @@ h3{
     display: flex;
     justify-content:center;
     align-items: center;
-}
-
-.footer{
-    width:50%;
-    margin: auto;
-    bottom:10%;
-    top:100%;
-    left:0;
-    position: absolute;
-    font-family:"Montserrat";
-    bottom: 0;
 }
 
 .links-nav{
@@ -295,7 +300,7 @@ a {
 }*/
 
 .cp-footer{
-    top:100%;
+    color:white;
 }
 .d{
     width:50%;
@@ -306,18 +311,18 @@ a {
     height:200px;
 }
 
-body::-webkit-scrollbar {
-    width: 12px;               /* width of the entire scrollbar */
-  }
-  
-  body::-webkit-scrollbar-track {
-    background:var(--ecoSense-grey);        /* color of the tracking area */
-  }
-  
-  body::-webkit-scrollbar-thumb {
-    background-color:white;    /* color of the scroll thumb */
-    border-radius: 10px;       /* roundness of the scroll thumb */
-    border: 3px solid var(--ecoSense-grey);  /* creates padding around scroll thumb */
-    height:30px;
-  }
-  
+.footer{
+    width:100%;
+    margin-top:100%;
+    position:absolute;
+    bottom:10%;
+    padding-top:15px;
+    padding-left:15%;
+    background:var(--ecoSense-red);
+    font-family:"Montserrat";
+    bottom: 0;
+}
+
+.svg-color-edit{
+    filter: invert(100%) sepia(0%) saturate(7500%) hue-rotate(66deg) brightness(108%) contrast(98%);
+}
