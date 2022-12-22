@@ -1,111 +1,113 @@
+<!--ecoSense Contact page,user can send messages and questions about the system-->
+<!--Project:ecoSense - Website-->
+<!--Author:Harli Laçej-->
+<!--Date: 26/10/2022-->
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+    <!--Setting the title, meta data and linking to external CSS or importing JQuery,FontAwesome and Google Fonts-->
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Document</title>
-    <link rel="stylesheet" href="contact.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+    <title>ecoSense | Support</title>
+    <link rel="stylesheet" href="main.css">
+    <link rel="icon" href="images/ecosense_logo.png" type="image/x-icon">
     <link href='https://fonts.googleapis.com/css?family=Montserrat:500,400,300' rel='stylesheet'>
-    
-</head>
-<body>
-    <div class="nav-bar">
-        <a href="index.html" class="nav-elem-1"><img class="image-logo" src="images/navigation-bar-logo.png" alt="Image" width="100px" height="45px"></a>
-        <p class="nav-elem-first"><a class="links-nav" href="index.html">Home</p>
-        <p class="nav-elem"><a class="links-nav" href="index.html">Product</a></p>
-        <p class="nav-elem"><a class="links-nav" href="index.html">About us</a></p>
-        <p class="nav-elem"><a class="links-nav" href="contact.html">Contact</a></p>
-        <button type="button" class="nav-elem-last">Sign in</button>
-    </div>
+    <script src="https://kit.fontawesome.com/1ae57ee07b.js" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"
+        integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script language="JavaScript" type="text/javascript" src="/js/jquery-1.2.6.min.js"></script>
+    <script language="JavaScript" type="text/javascript" src="/js/jquery-ui-personalized-1.5.2.packed.js"></script>
+    <script language="JavaScript" type="text/javascript" src="/js/sprinkle.js"></script>
 
-    <div class="contact-form">
-    <div class="field">
-        <label class="label">Name</label>
-        <div class="control">
-          <input class="input" type="text" placeholder="Text input">
-        </div>
-      </div>
-      
-      <div class="field">
-        <label class="label">Username</label>
-        <div class="control has-icons-left has-icons-right">
-          <input class="input is-success" type="text" placeholder="Text input" value="bulma">
-          <span class="icon is-small is-left">
-            <i class="fas fa-user"></i>
-          </span>
-          <span class="icon is-small is-right">
-            <i class="fas fa-check"></i>
-          </span>
-        </div>
-        <p class="help is-success">This username is available</p>
-      </div>
-      
-      <div class="field">
-        <label class="label">Email</label>
-        <div class="control has-icons-left has-icons-right">
-          <input class="input is-danger" type="email" placeholder="Email input" value="hello@">
-          <span class="icon is-small is-left">
-            <i class="fas fa-envelope"></i>
-          </span>
-          <span class="icon is-small is-right">
-            <i class="fas fa-exclamation-triangle"></i>
-          </span>
-        </div>
-        <p class="help is-danger">This email is invalid</p>
-      </div>
-      
-      <div class="field">
-        <label class="label">Subject</label>
-        <div class="control">
-          <div class="select">
-            <select>
-              <option>Select dropdown</option>
-              <option>With options</option>
-            </select>
-          </div>
-        </div>
-      </div>
-      
-      <div class="field">
-        <label class="label">Message</label>
-        <div class="control">
-          <textarea class="textarea" placeholder="Textarea"></textarea>
-        </div>
-      </div>
-      
-      <div class="field">
-        <div class="control">
-          <label class="checkbox">
-            <input type="checkbox">
-            I agree to the <a href="#">terms and conditions</a>
-          </label>
-        </div>
-      </div>
-      
-      <div class="field">
-        <div class="control">
-          <label class="radio">
-            <input type="radio" name="question">
-            Yes
-          </label>
-          <label class="radio">
-            <input type="radio" name="question">
-            No
-          </label>
-        </div>
-      </div>
-      
-      <div class="field is-grouped">
-        <div class="control">
-          <button class="button is-link">Submit</button>
-        </div>
-        <div class="control">
-          <button class="button is-link is-light">Cancel</button>
-        </div>
-      </div>
-    </div>
-    
+</head>
+
+<body>
+    <!--In body is displayed the navigation bar and the form where the user can sends questions-->
+    <section class="showcase">
+        <nav class="nav">
+            <div class="container">
+                <div class="logo">
+                    <a href="#"><img src="images/navigation-bar-logo.png" width="100" height="50"></a>
+                </div>
+                <div id="mainListDiv" class="main_list">
+                    <ul class="navlinks">
+                        <li><a style="size:15;" href="index.html">Home</a></li>
+                        <li><a style="size:15;" href="model/index2.html">Product</a></li>
+                        <li><a style="size:15;" href="contact.html">Contact</a></li>
+                        <li><a style="size:15;" href="login.php">Log in</a></li>
+                    </ul>
+                </div>
+                <span class="navTrigger">
+                    <i></i>
+                    <i></i>
+                    <i></i>
+                </span>
+            </div>
+        </nav>
+
+        <!--Form where user can send data,the user gives credentials like Firstname,Lastname,Telephone,Email and the question or the message-->
+        <!--Data from form are sent to "email.php"-->
+        <form action="email.php" method="post" name="contactform">
+            <h1 style="color:rgb(230, 115, 107);text-shadow: 3px 2px 3px rgba(255,255,255,.2);">Contact us...</h1>
+            <p><label for="first">First Name *</label><br>
+                <input maxlength="50" name="first_name" id="first" size="30" type="text" required
+                    placeholder="First Name" />
+            </p>
+
+            <p><label for="last">Last Name </label><br>
+                <input maxlength="50" name="last_name" id="last" size="30" type="text" required
+                    placeholder="Last Name" />
+            </p>
+
+
+            <p><label for="phone">Phone number </label><br>
+                <input maxlength="30" name="telephone" id="phone" size="30" type="text" required
+                    placeholder="+xxx-xx-xx-xxx" />
+            </p>
+
+
+            <p><label for="emailadr">Email </label><br>
+                <input maxlength="80" name="email" id="emailadr" size="30" type="email" required
+                    placeholder="user@email.com" />
+            </p>
+
+
+            <p><label for="msg">Message </label><br>
+                <textarea cols="25" maxlength="1000" id="msg" name="comments" rows="6" required
+                    placeholder="Write here..."></textarea>
+            </p>
+
+            <p><input type="submit" value="Send Message" /></p>
+
+        </form>
+        <script>
+            /*Part of the code in JQuery through which the navigation bar appears or not with background, 
+            depending on where we are. If we are at the top of the page, the background of the navigation 
+            bar does not appear*/
+            $(window).scroll(function () {
+                if ($(document).scrollTop() > 50) {
+                    $('.nav').addClass('affix');
+                    console.log("OK");
+                } else {
+                    $('.nav').removeClass('affix');
+                }
+            });
+        </script>
+        <script>
+            /*Part of the code in JQuery through which, if we are in a viewport with a small width, we will have a 
+            hamburger button, which if clicked will show a navigation bar.*/
+            $('.navTrigger').click(function () {
+                $(this).toggleClass('active');
+                console.log("Clicked menu");
+                $("#mainListDiv").toggleClass("show_list");
+                $("#mainListDiv").fadeIn();
+
+            });
+        </script>
+
 </body>
+
 </html>

@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="description" content="&lt;model-viewer&gt; template">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link type="text/css" href="./styles.css" rel="stylesheet"/>
+    <!-- OPTIONAL: The :focus-visible polyfill removes the focus ring for some input types -->
+    <script src="https://unpkg.com/focus-visible@5.0.2/dist/focus-visible.js" defer></script>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../images/ecosense_logo.png" type="image/x-icon">
+    <link href='https://fonts.googleapis.com/css?family=Montserrat:500,400,300' rel='stylesheet'>
+    <link rel="stylesheet" href="../main.css">
+    <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+    <title>ecoSense | ecoSense</title>
+  </head>
+  <body>
+    <section class="showcase">
+      <nav class="nav">
+          <div class="container">
+              <div class="logo">
+                  <a href="#"><img src="/" width="100" height="50"></a>
+              </div>
+              <div id="mainListDiv" class="main_list">
+                  <ul class="navlinks">
+                      <li><a style="size:15;" href="../index.html">Home</a></li>
+                      <li><a style="size:15;"href="model/index.html">Product</a></li>
+                      <li><a style="size:15;"href="contact.html">Contact</a></li>
+                      <li><a style="size:15;"href="login.php">Log in</a></li>
+                  </ul>
+              </div>
+              <span class="navTrigger">
+                  <i></i>
+                  <i></i>
+                  <i></i>
+              </span>
+          </div>
+      </nav>
+    <!-- <model-viewer> HTML element -->
+    <div class="card">
+    <model-viewer  src="Rapspberry Pi Case + Cover - Harli Lacej v2.glb" ar ar-modes="webxr scene-viewer quick-look" camera-controls poster="poster.webp" shadow-intensity="1.14" environment-image="spruit_sunrise_1k_HDR.hdr" exposure="1.19" camera-orbit="0.389deg 157.5deg auto">
+      <div class="progress-bar hide" slot="progress-bar">
+          <div class="update-bar"></div>
+      </div>
+      <button slot="ar-button" id="ar-button">
+          View in your space
+      </button>
+      <div id="ar-prompt">
+          <img src="ar_hand_prompt.png">
+      </div>
+    </model-viewer> 
+  </div> 
+    <script src="script.js"></script>
+    <!-- Loads <model-viewer> for browsers: -->
+    <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+  </body>
+</html>

@@ -1,306 +1,854 @@
+/*External CSS,the design for "index.html","contact.html"
+Project:ecoSense - Website
+Author:Harli Laçej
+Date: 26/10/2022*/
+@import url("https://fonts.googleapis.com/css?family=Quicksand:400,500,700");
 :root {
-    --ecoSense-green:#abc964;
-    --ecosense-dgreen:rgb(48, 199, 140);
-    --ecoSense-red:#e6736b;
-    --ecoSense-orange:rgb(242, 189, 83);
-    --ecoSense-grey:rgb(146, 142, 127);
-    --background:white;
-
+    /*creating variables that store the values of the colors used on the website*/
+  --ecoSense-green: #abc964;
+  --ecosense-dgreen: rgb(48, 199, 140);
+  --ecoSense-red: rgb(230, 115, 107);
+  --ecoSense-orange: rgb(242, 189, 83);
+  --ecoSense-grey: rgb(146, 142, 127);
+  --background: #2e3b52;
 }
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+* {/*This properties have impact in all html elements*/
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-body{
-    background-color: #FFFFFF;
-}
-.main {
-    background-image: url("background.png");
-    background-size: cover;
-    padding:10px 10px;
-    height:1000px;
-
-}
-.footer{
-    background-image: url("footer.png");
-    background-size: cover;
-    padding:1px 1px;
-    height:400px;
-}
-
-.cp-footer{
-    margin-top:1.2%;
-    padding-left:15%;
-    color:white;
-    font-family:"Montserrat";
+body {
+  margin: 0;
+  background-color:var(--background) ;
+  font-family: "Open Sans", sans-serif;
+    line-height: 1.5;
 }
 
 
 body::-webkit-scrollbar {
-    width: 12px;               /* width of the entire scrollbar */
+/*cutomizing the scrollbar in website(1)*/
+  width: 12px;
 }
-  
+
 body::-webkit-scrollbar-track {
-    background:var(--ecoSense-grey);        /* color of the tracking area */
+/*cutomizing the scrollbar in website(2)*/
+  background: var(--ecoSense-grey);
 }
 
 body::-webkit-scrollbar-thumb {
-    background-color:white;    /* color of the scroll thumb */
-    border-radius: 10px;       /* roundness of the scroll thumb */
-    border: 3px solid var(--ecoSense-grey);  /* creates padding around scroll thumb */
-    height:30px;
-}
-  
-
-.nav-bar{
-    margin:0 auto;
-    max-width:70%;
-}
-.nav-elem{
-    display:inline-block;
-    height:3%;
-    margin: 3%;
-    font-size:16px;
-    font-family:"Montserrat";
+/*cutomizing the scrollbar in website(3)*/
+  background-color: white;
+  border-radius: 10px;
+  border: 3px solid var(--ecoSense-grey);
+  height: 30px;
 }
 
-.nav-elem-first{
-    display:inline-block;
-    height:3%;
-    font-family:"Montserrat"; 
-    margin:1.5%;
-    margin-top:0%;
-    margin-left:20%;
-    
+h3 {
+  /*customizing the tag <h3>*/
+  font-size: 15px;
+  font-family: "Montserrat";
+  color: white;
+  font-weight: 300;
 }
-
-.nav-elem-last{
-    display:inline-block;
-    height:30px;
-    margin:1.5%;
-    margin-top:0%;
-    margin-left:10%;
-    left:2px;
-    font-family:"Montserrat";
-    
-}
-
-.nav-elem:hover{
-    cursor: pointer;
-    color: 	#848884;
-}
-.nav-elem-first:hover{
-    cursor: pointer;
-    color: 	#848884;
-}
-
-.nav-elem-last{
-    border: 0px;
-    width:100px;
-    font-size:16px;
-    border: 2px solid var(--ecoSense-green);
-  border-radius: 3rem;
-  color:black;
-  overflow: hidden;
-  position: relative;
-  text-decoration: none;
-  transition: 0.2s transform ease-in-out;
-  will-change: transform;
-  z-index: 0;
-  background-color: var(--background);
-}
-
-.nav-elem-last::after {
-    background-color:var(--ecoSense-green);
-    border-radius: 3rem;
-    content: '';
-    display: block;
-    height: 100%;
-    width: 100%;
-    position: absolute;
-    left: 0;
-    top: 0;
-    transform: translate(-100%, 0) rotate(10deg);
-    transform-origin: top left;
-    transition: 0.2s transform ease-out;
-    will-change: transform;
-    z-index: -1;
-  }
-  .nav-elem-last:hover::after {
-    transform: translate(0, 0);
-  }
-.nav-elem-last:hover {
-    border: 2px solid transparent;
-    color:white;
-    transform: scale(1.05);
-    will-change: transform;
-  }
-  
-.image-logo{
-    cursor:pointer;
-}
-#gradient-canvas {
-  width:100%;
-  height:100%;
-  --gradient-color-1: #4CD4B0; 
-  --gradient-color-2: #FFFCE6; 
-  --gradient-color-3: #F24D16;  
-  --gradient-color-4: #EDD834;
-}
-
-.header{
-    font-family:"Montserrat";
-    font-weight:bold;
-    width:800px;
-    margin-left:20%;
-    margin-top:8%
-}
-
-.main-info{
-    font-size: 50px;
-    font-family:"Montserrat";
-    color:white;
-    font-weight: 300;
-
-}
-h3{
-    font-size: 15px;
-    font-family:"Montserrat";
-    color:white;
-    font-weight: 300; 
-}
-.loader-wrapper{
-    width:100%;
-    height:100%;
-    z-index:1;
-    position:fixed;
-    top:0;
-    left:0;
-    background-color:white;
-    display: flex;
-    justify-content:center;
-    align-items: center;
-}
-
-.links-nav{
-    color:var(--background);
-    text-decoration: none;
-}
-
-.links-nav:hover{
-    color:#ffffff70;
-    text-decoration: none;
-}
-
-
-/*Code taken from:https://www.codeply.com/go/orizmNWvT3/css-only-typing-animation-with-multiple-words*/
-h1 {
-    font-size: 3rem;
-    font-weight: 300;
-    font-family:"Montserrat";
-    text-decoration:none;
-}
-
-.text-typing, .text-nowrap {
-    white-space:nowrap;
-    display: block;
+.loader-wrapper {
+  /*the logo animation,customization of the div*/
+  width: 100%;
+  height: 100%;
+  /*the is above other divs or elements in the page*/
+  z-index: 5;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 a {
-    color:var(--background);
-    -webkit-transition: all .35s;
-    -moz-transition: all .35s;
-    transition: all .35s;
-    background-image: linear-gradient(180deg,transparent 75%,#fcf113 0);
-    background-size: 0 100%;
-    background-repeat: no-repeat;
-    -webkit-transition: background-size .4s ease;
-    transition: background-size .4s ease;
-    text-decoration:none;
+  color: var(--background);
+  -webkit-transition: all 0.35s;
+  -moz-transition: all 0.35s;
+  transition: all 0.35s;
+  background-image: linear-gradient(180deg, transparent 75%, #fcf113 0);
+  background-size: 0 100%;
+  background-repeat: no-repeat;
+  -webkit-transition: background-size 0.4s ease;
+  transition: background-size 0.4s ease;
+  text-decoration: none;
 }
 
+/*Texttyping animation in ecoSense homepage(Line 80-159)
+  Link:https://www.codeply.com/go/orizmNWvT3/css-only-typing-animation-with-multiple-words*/
 .typing-words span {
-    text-indent: 10px;
-    position: absolute;
-	overflow: hidden;
-	white-space: nowrap;
-	color:rgb(255, 255, 255);
-    visibility: hidden;
-    border-right: 4px solid transparent;
-    max-width: 12.5rem;
-    font-family:"Montserrat";
+  text-indent: 0px;
+  position: absolute;
+  overflow: hidden;
+  white-space: nowrap;
+  color: rgb(255, 255, 255);
+  visibility: hidden;
+  border-right: 4px solid transparent;
+  max-width: 14rem;
+  font-family: "Montserrat";
 }
-/* steps is number of chars-1 */
+
 .typing-words span:nth-child(1) {
-	animation: typing 0.7s steps(5), typingReverse 0.7s steps(5) 0.7s, blink-wait 1s step-end 1 1.4s, blink-caret 0.6s step-end infinite;
+  animation: typing 0.7s steps(5), typingReverse 0.7s steps(5) 0.7s,
+    blink-wait 1s step-end 1 1.4s, blink-caret 0.6s step-end infinite;
 }
-.typing-words span:nth-child(2) { 
-	animation: typing 0.7s steps(5) 2.4s, typingReverse 0.7s steps(5) 3.1s, blink-wait 1s step-end 1 3.8s, blink-caret 0.6s step-end infinite;
+.typing-words span:nth-child(2) {
+  animation: typing 0.7s steps(5) 2.4s, typingReverse 0.7s steps(5) 3.1s,
+    blink-wait 1s step-end 1 3.8s, blink-caret 0.6s step-end infinite;
 }
-.typing-words span:nth-child(3) { 
-	animation: typing 0.7s steps(5) 4.8s, typingReverse 0.7s steps(5) 5.5s, blink-wait 1s step-end 1 6.2s, blink-caret 0.6s step-end infinite;
+.typing-words span:nth-child(3) {
+  animation: typing 0.7s steps(5) 4.8s, typingReverse 0.7s steps(5) 5.5s,
+    blink-wait 1s step-end 1 6.2s, blink-caret 0.6s step-end infinite;
 }
-.typing-words span:nth-child(4) { 
-	animation: typing 0.7s steps(5) 7.2s, typingReverse 0.7s steps(5) 7.9s, blink-wait 1s step-end 1 8.5s, blink-caret 0.6s step-end infinite;
+.typing-words span:nth-child(4) {
+  animation: typing 0.7s steps(5) 7.2s, typingReverse 0.7s steps(5) 7.9s,
+    blink-wait 1s step-end 1 8.5s, blink-caret 0.6s step-end infinite;
 }
-/* pause on last word, end cursor blink */
-.typing-words span:nth-child(5) {  
-	animation: blink-caret 0.6s step-end 7 9.5s, typing 1s steps(7) 9.5s forwards;
+
+.typing-words span:nth-child(5) {
+  animation: blink-caret 0.6s step-end 7 9.5s, typing 1s steps(7) 9.5s forwards;
 }
 
 @keyframes typing {
-    from { width: 0; visibility: hidden; }
-    to { width: 80%; visibility: visible; color: rgb(255, 255, 255); }
+  from {
+    width: 0;
+    visibility: hidden;
+  }
+  to {
+    width: 80%;
+    visibility: visible;
+    color: rgb(255, 255, 255);
+  }
 }
 
 @keyframes typingReverse {
-    from { width: 100%; visibility: visible; color: rgb(255, 255, 255); }
-    to { width: 0; }
+  from {
+    width: 100%;
+    visibility: visible;
+    color: rgb(255, 255, 255);
+  }
+  to {
+    width: 0;
+  }
 }
 
 @keyframes blink-wait {
-    from, to { width: 0; visibility: hidden; }
-    30%, 60% { width: 5px; visibility: visible; }
+  from,
+  to {
+    width: 0;
+    visibility: hidden;
+  }
+  30%,
+  60% {
+    width: 5px;
+    visibility: visible;
+  }
 }
 
 @keyframes blink-caret {
-    from, to { border-color: transparent; }
-    50% { border-color:rgb(255, 255, 255); }
+  from,
+  to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: rgb(255, 255, 255);
+  }
 }
 
-.learn-more-btn{
-    border-radius: 3rem;
-    color:var(--background);
+
+a {
+    /*customizing the links in the page,not displaying underline and blue font*/
+  text-decoration: none;
+  color: white;
+}
+
+h1 {
+    /*changing the default values for <h1> properties*/
+  font-weight: 300;
+  font-size: 60px;
+  line-height: 1.2;
+  margin-bottom: 15px;
+}
+
+.showcase {
+    /*customizing the homepage-background,where will the video,header,and navigation bar are displayed*/
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  padding: 0 20px;
+}
+
+.video-container {
+  /*positioning the video container div*/
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.video-container video {
+  /*setting the properties for the video inside video-container div*/
+  min-width: 100%;
+  min-height: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  object-fit: cover;
+}
+
+@media only screen and (max-width: 1300px) {
+  /*Making the video-width smaller in smaller screen width(>1300px)*/
+  .video-container video {
+    max-width: 80%;
+    min-height: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    object-fit: cover;
+  }
+}
+
+@media only screen and (max-width: 750px) {
+  /*Making the video-width smaller in smaller screen width(>750px)*/
+  .video-container video {
+    max-width: 20%;
+    min-height: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    object-fit: cover;
+  }
+}
+.video-container:after {
+  content: "";
+  z-index: 1;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  position: absolute;
+}
+
+.content {
+  font-family: "Montserrat";
+  font-weight: bold;
+  width: 800px;
+  margin-left: 5%;
+  margin-top: 20%;
+  z-index: 1;
+}
+
+#main-slogan {
+  margin-left: -20%;
+}
+@media only screen and (max-width: 1000px) {
+    /*not displaying main slogan in homepage*/
+  #main-slogan {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+    /*setting the distance with top for the div*/
+  .content {
+    margin-top: 80%;
+  }
+}
+
+.btn {
+    /*styling "Read More" button inside div called "content"*/
+  display: inline-block;
+  padding: 10px 30px;
+  background: var(--primary-color);
+  color: #fff;
+  border-radius: 5px;
+  border: solid #fff 1px;
+  margin-top: 25px;
+  opacity: 0.7;
+}
+
+.btn:hover {
+    /*making the button look smaller when the mouse is over it*/
+  transform: scale(0.98);
+}
+
+#about {
+    /*Setting properties for the section about,where is a short description for ecoSense*/
+  padding: 40px;
+  text-align: center;
+  background-color: #2e3b52;
+}
+
+#about p {
+    /*Styling the paragraph in section "about"*/
+  font-size: 1.2rem;
+  max-width: 1000px;
+  margin: auto;
+  color: #fff;
+}
+#about h1 {
+    /*Setting color of header in section "about"*/
+  color: var(--ecoSense-red);
+}
+
+#about h2 {
+    /*Styling the header-2 in section "about"*/
+  margin: 0px 0;
+  color: white;
+}
+
+#whyus {
+/*Setting properties for the section why us,where are the main advantages of our system*/
+  padding: 40px;
+  text-align: center;
+  background-color: #2e3b52;
+}
+
+#whyus p {
+    /*Styling the paragraph in section "whyus"*/
+  font-size: 1.2rem;
+  max-width: 1000px;
+  margin: auto;
+  color: #fff;
+}
+#whyus h1 {
+    /*Setting color of header in section "whyus"*/
+  color: var(--ecoSense-red);
+}
+
+#whyus h2 {
+    /*Styling the header-2 in section "whyus"*/
+  margin: 5px 0;
+  color: var(--ecoSense-green);
+}
+
+.space {
+    /*div used to create vertical spaces in the page*/
+  margin-top: 90px;
+}
+
+#poster {
+    /*styling */
+  padding: 40px;
+  text-align: center;
+  align-items: center;
+  background-color: #2e3b52;
+}
+
+img {
+    /*styling the image,used for images that is inside section "poster"*/
+  max-width: 100%;
+  height: auto;
+}
+section {
+    /*Setting inside space throug padding for every section in page*/
+  padding: 60px 0;
+}
+ul {
+  /*Styling the list of the page*/
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+/*----------------------------------------------*/
+/*Styling elements of footer of the page(Line 363-440)
+Inspiration-Link:https://codepen.io/baahubali92/pen/drrWEB*/
+.contact-area {
+  border-bottom: 1px solid white;
+}
+
+.contact-content p {
+  font-size: 15px;
+  margin: 30px 0 60px;
+  position: relative;
+}
+
+.contact-content p::after {
+  background: white;
+  bottom: -30px;
+  content: "";
+  height: 1px;
+  left: 50%;
+  position: absolute;
+  transform: translate(-50%);
+  width: 80%;
+}
+
+.contact-content h6 {
+  color: white;
+  font-size: 15px;
+  font-weight: 400;
+  margin-bottom: 10px;
+}
+
+.contact-content span {
+  color: white;
+  margin: 0 10px;
+}
+
+.contact-social {
+  margin-top: 30px;
+  margin-left: 45%;
+}
+
+.contact-social > ul {
+  display: inline-flex;
+}
+
+.contact-social ul li a {
+  border: 1px solid white;
+  color: white;
+  display: inline-block;
+  height: 40px;
+  margin: 10px;
+  padding-top: 7px;
+  padding-left: 10px;
+  transition: all 0.4s ease 0s;
+  width: 40px;
+}
+
+.contact-social ul li a:hover {
+  border: 1px solid var(--ecoSense-red);
+  color: var(var(--ecoSense-red));
+}
+
+.contact-content img {
+  max-width: 210px;
+}
+
+.contact-area,
+footer {
+  background: var(--ecoSense-red);
+}
+
+footer p {
+  padding: 40px 0;
+  text-align: center;
+}
+
+footer img {
+  width: 44px;
+}
+/*----------------------------------------------*/
+
+/*----------------------------------------------*/
+/*Styling of the navigation bar in ecoSense page,responsive navigation bar(Line 443-779)
+Link:https://codepen.io/albizan/pen/mMWdWZ*/
+
+/* Navbar section */
+
+.nav {
+  width: 100%;
+  height: 65px;
+  z-index: 3;
+  position: fixed;
+  line-height: 65px;
+  text-align: center;
+}
+
+.nav div.logo {
+  float: left;
+  width: auto;
+  height: auto;
+  padding-left: 3rem;
+}
+
+.nav div.logo a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 1rem;
+  font-family: "Montserrat";
+}
+
+.nav div.logo a:hover {
+  color: var(--ecoSense-green);
+}
+
+.nav div.main_list {
+  height: 65px;
+  float: right;
+}
+
+.nav div.main_list ul {
+  width: 100%;
+  height: 65px;
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav div.main_list ul li {
+  width: auto;
+  height: 65px;
+  padding: 0;
+  padding-right: 3rem;
+}
+
+.nav div.main_list ul li a {
+  text-decoration: none;
+  color: #fff;
+  line-height: 65px;
+  font-size: 1.25rem;
+  font-family: "Montserrat";
+}
+
+.nav div.main_list ul li a:hover {
+  color: var(--ecoSense-grey);
+}
+
+.navTrigger {
+  display: none;
+}
+
+.nav {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  -webkit-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+}
+
+/* Media qurey section */
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .container {
+    margin: 0;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .navTrigger {
+    display: block;
+  }
+  .nav div.logo {
+    margin-left: 15px;
+  }
+  .nav div.main_list {
+    width: 100%;
+    height: 0;
     overflow: hidden;
-    position: relative;
-    text-decoration: none;
-    transition: 0.2s transform ease-in-out;
-    will-change: transform;
-    z-index: 0;
-    background-color: var(--ecoSense-orange);
-    height:40px;
-    width:150px;
-    padding:3px;
-    font-family:"Montserrat";
-    font-weight:500;
-    border: 0px;
-    padding-left:5px;
-    padding-right:5px;
+  }
+  .nav div.show_list {
+    height: auto;
+    display: none;
+  }
+  .nav div.main_list ul {
+    flex-direction: column;
+    width: 100%;
+    height: 100vh;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background-color: #2e3b52;
+    background-position: center top;
+  }
+  .nav div.main_list ul li {
+    width: 100%;
+    text-align: right;
+  }
+  .nav div.main_list ul li a {
+    text-align: center;
+    width: 100%;
+    font-size: 3rem;
+    padding: 20px;
+  }
+  .nav div.media_button {
+    display: block;
+  }
 }
 
-.learn-more-btn:hover{
-    background-color:rgba(242, 189, 83, 0.685);
-    ;
+/* Animation */
+/* Inspiration taken from Dicson https://codemyui.com/simple-hamburger-menu-x-mark-animation/ */
+
+.navTrigger {
+  cursor: pointer;
+  width: 30px;
+  height: 25px;
+  margin: auto;
+  position: absolute;
+  right: 30px;
+  top: 0;
+  bottom: 0;
 }
 
-.learn-more-div{
-    left:50%;
-    padding-top:100px;
-    width:20%;
-    margin: auto;
+.navTrigger i {
+  background-color: #fff;
+  border-radius: 2px;
+  content: "";
+  display: block;
+  width: 100%;
+  height: 4px;
 }
- 
-.svg-color-edit{
-    filter: invert(100%) sepia(0%) saturate(7500%) hue-rotate(66deg) brightness(108%) contrast(98%);
+
+.navTrigger i:nth-child(1) {
+  -webkit-animation: outT 0.8s backwards;
+  animation: outT 0.8s backwards;
+  -webkit-animation-direction: reverse;
+  animation-direction: reverse;
 }
+
+.navTrigger i:nth-child(2) {
+  margin: 5px 0;
+  -webkit-animation: outM 0.8s backwards;
+  animation: outM 0.8s backwards;
+  -webkit-animation-direction: reverse;
+  animation-direction: reverse;
+}
+
+.navTrigger i:nth-child(3) {
+  -webkit-animation: outBtm 0.8s backwards;
+  animation: outBtm 0.8s backwards;
+  -webkit-animation-direction: reverse;
+  animation-direction: reverse;
+}
+
+.navTrigger.active i:nth-child(1) {
+  -webkit-animation: inT 0.8s forwards;
+  animation: inT 0.8s forwards;
+}
+
+.navTrigger.active i:nth-child(2) {
+  -webkit-animation: inM 0.8s forwards;
+  animation: inM 0.8s forwards;
+}
+
+.navTrigger.active i:nth-child(3) {
+  -webkit-animation: inBtm 0.8s forwards;
+  animation: inBtm 0.8s forwards;
+}
+
+@-webkit-keyframes inM {
+  50% {
+    -webkit-transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(45deg);
+  }
+}
+
+@keyframes inM {
+  50% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(45deg);
+  }
+}
+
+@-webkit-keyframes outM {
+  50% {
+    -webkit-transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(45deg);
+  }
+}
+
+@keyframes outM {
+  50% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(45deg);
+  }
+}
+
+@-webkit-keyframes inT {
+  0% {
+    -webkit-transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    -webkit-transform: translateY(9px) rotate(0deg);
+  }
+  100% {
+    -webkit-transform: translateY(9px) rotate(135deg);
+  }
+}
+
+@keyframes inT {
+  0% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(9px) rotate(0deg);
+  }
+  100% {
+    transform: translateY(9px) rotate(135deg);
+  }
+}
+
+@-webkit-keyframes outT {
+  0% {
+    -webkit-transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    -webkit-transform: translateY(9px) rotate(0deg);
+  }
+  100% {
+    -webkit-transform: translateY(9px) rotate(135deg);
+  }
+}
+
+@keyframes outT {
+  0% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(9px) rotate(0deg);
+  }
+  100% {
+    transform: translateY(9px) rotate(135deg);
+  }
+}
+
+@-webkit-keyframes inBtm {
+  0% {
+    -webkit-transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    -webkit-transform: translateY(-9px) rotate(0deg);
+  }
+  100% {
+    -webkit-transform: translateY(-9px) rotate(135deg);
+  }
+}
+
+@keyframes inBtm {
+  0% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-9px) rotate(0deg);
+  }
+  100% {
+    transform: translateY(-9px) rotate(135deg);
+  }
+}
+
+@-webkit-keyframes outBtm {
+  0% {
+    -webkit-transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    -webkit-transform: translateY(-9px) rotate(0deg);
+  }
+  100% {
+    -webkit-transform: translateY(-9px) rotate(135deg);
+  }
+}
+
+@keyframes outBtm {
+  0% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-9px) rotate(0deg);
+  }
+  100% {
+    transform: translateY(-9px) rotate(135deg);
+  }
+}
+
+.affix {
+  padding: 0;
+  background-color: #2e3b52;
+}
+
+.myH2 {
+  text-align: center;
+  font-size: 4rem;
+}
+.myP {
+  text-align: justify;
+  padding-left: 15%;
+  padding-right: 15%;
+  font-size: 20px;
+}
+@media all and (max-width: 700px) {
+  .myP {
+    padding: 2%;
+  }
+}
+/*----------------------------------------------*/
+
+form {
+  /*Setting properties for the form in "contact.html"*/
+  min-width: 600px;
+  padding: 1rem;
+  margin: 0 auto;
+  margin-top: 13%;
+  font-family: "Montserrat";
+  font-size: 20px;
+  color: white;
+  background-color: #414957;
+  border-radius: 10px;
+}
+
+@media only screen and (max-width: 800px) {
+   /*Make the form responsive also for screen with width maximal to 800px*/
+  form {
+    width: 200px;
+    top: 50px;
+    position: fixed;
+
+    margin: 0 auto;
+    margin-top: 20%;
+  }
+  input,
+  textarea {
+    width: 100px;
+    padding: 0.1rem;
+  }
+}
+
+input,
+textarea {
+    /*Sttling the inputs and textarea in the form in "contact.html"*/
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid silver;
+  background: transparent;
+  border: 0;
+  outline: 0;
+  border-bottom: 2px solid var(--ecoSense-red);
+  font-size: 1.4rem;
+  color: #ccc;
+  font-size: 15px;
+  margin-top: 5px;
+  font-family: "Montserrat";
+}
+
+label,
+small {
+    /*Setting the size of the font of the form label*/
+  font-size: small;
+}
+
+input[type="submit"] {
+  /*customizing the submit input used in contact.html*/
+  margin-bottom: 5px;
+  padding: 0.5rem;
+  border-radius: 5px;
+  cursor: pointer;
+  font-family: "Montserrat";
+  margin-top: 20px;
+  background-color: var(--ecoSense-red);
+  border: 0;
+  border-radius: 5px;
+  color: #fff;
+  font-size: 16px;
+  font-weight: bold;
+  line-height: 1.4;
+  padding: 10px;
+}
+

@@ -1,0 +1,217 @@
+<!--ecoSense Product,model view of ecoSense System and system description-->
+<!--Project:ecoSense - Website-->
+<!--Author:Harli Laçej-->
+<!--Date: 26/10/2022-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <!--Setting the title, meta data and linking to external CSS,importing, Font Awesome, Google Fonts and Google ModelViewer-->
+  <meta charset="utf-8">
+  <meta name="description" content="&lt;model-viewer&gt; template">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link type="text/css" href="./styles.css" rel="stylesheet" />
+  <script src="https://unpkg.com/focus-visible@5.0.2/dist/focus-visible.js" defer></script>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="../images/ecosense_logo.png" type="image/x-icon">
+  <link href='https://fonts.googleapis.com/css?family=Montserrat:500,400,300' rel='stylesheet'>
+  <link rel="stylesheet" href="main.css">
+  <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"
+    integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script language="JavaScript" type="text/javascript" src="/js/jquery-1.2.6.min.js"></script>
+  <script language="JavaScript" type="text/javascript" src="/js/jquery-ui-personalized-1.5.2.packed.js"></script>
+  <script language="JavaScript" type="text/javascript" src="/js/sprinkle.js"></script>
+  <style>
+    /*styling for the page,internal CSS*/
+    model-viewer {
+      margin-left: 10%;
+      width: 600px;
+      height: 500px;
+      background-color: #2E3B52;
+    }
+
+    h1 {
+      font-weight: 300;
+      font-size: 30px;
+      line-height: 1.2;
+      margin-bottom: 15px;
+      margin-left: 20%;
+      color: rgb(230, 115, 107);
+      font-family: 'Open Sans', sans-serif;
+    }
+
+    .info {
+      display: inline-block;
+      width: 30%;
+      height: 600px;
+      left: 50%;
+      position: fixed;
+      top: 20%;
+      padding-left: 30px;
+      padding-top: 10px;
+      background-color: #2E3B52;
+      font-family: 'Open Sans', sans-serif;
+      color: white;
+    }
+
+    @media only screen and (max-width: 800px) {
+      model-viewer {
+        margin-left: 10%;
+        width: 300px;
+        height: 200px;
+        background-color: #2E3B52;
+      }
+    }
+
+    @media only screen and (max-width: 800px) {
+      .info {
+        display: inline-block;
+        width: 90%;
+        height: 600px;
+        left: 2%;
+        position: fixed;
+        top: 60%;
+        padding-left: 30px;
+        padding-top: 10px;
+        background-color: #2E3B52;
+        font-family: 'Open Sans', sans-serif;
+        color: white;
+      }
+    }
+
+    ul .tick::marker {
+      content: '✓';
+      color: #abc964;
+    }
+
+    input[type=submit] {
+      margin-bottom: 5px;
+      padding: .5rem;
+      border-radius: 5px;
+      background-color: transparent;
+      cursor: pointer;
+      font-family: "Montserrat";
+      margin-top: 20px;
+    }
+
+    input[type=submit] {
+      background-color: var(--ecoSense-red);
+      border: 0;
+      border-radius: 5px;
+      cursor: pointer;
+      color: #fff;
+      font-size: 16px;
+      line-height: 1.4;
+      padding: 10px;
+    }
+  </style>
+  <title>Product | ecoSense</title>
+</head>
+
+<body>
+  <section class="showcase">
+    <!--Navigation bar of the page-->
+    <nav class="nav">
+      <div class="container">
+        <div class="logo">
+          <a href="#"><img src="images/navigation-bar-logo.png" width="100" height="45"></a>
+        </div>
+        <div id="mainListDiv" class="main_list">
+          <ul class="navlinks">
+            <li><a style="size:15;" href="../index.html">Home</a></li>
+            <li><a style="size:15;" href="index2.html">Product</a></li>
+            <li><a style="size:15;" href="../contact.html">Contact</a></li>
+            <li><a style="size:15;" href="../login.php">Log in</a></li>
+          </ul>
+        </div>
+        <span class="navTrigger">
+          <i></i>
+          <i></i>
+          <i></i>
+        </span>
+      </div>
+    </nav>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <h1>ecoSense System</h1>
+    <!-- <model-viewer> HTML element -->
+    <model-viewer src="Rapspberry Pi Case + Cover - Harli Lacej v2.glb" ar ar-modes="webxr scene-viewer quick-look"
+      camera-controls poster="poster.png" shadow-intensity="1.14" environment-image="spruit_sunrise_1k_HDR.hdr"
+      exposure="1.19" camera-orbit="0.389deg 157.5deg auto">
+      <div class="progress-bar hide" slot="progress-bar">
+        <div class="update-bar"></div>
+      </div>
+      <button slot="ar-button" id="ar-button">
+        View in your space
+      </button>
+      <div id="ar-prompt">
+        <img src="https://modelviewer.dev/shared-assets/icons/hand.png">
+      </div>
+    </model-viewer>
+    <div class="info">
+      <h3>ecoSense - Temperature</h3>
+      <br>
+      <br>
+      <ul>
+        <li class="tick"> &nbsp;It measures the temperature in different positions</li>
+        <li class="tick"> &nbsp;System case made of PLA material</li>
+        <li class="tick"> &nbsp;Data accessible on the website and in the Chatbot for free</li>
+        <li class="tick"> &nbsp;Accurate measurements</li>
+        <li class="tick"> &nbsp;modern design</li>
+        <li class="tick"> &nbsp; simple use</li>
+      </ul>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <input type="submit" value="Order now" />
+
+    </div>
+
+
+
+    <script src="script.js"></script>
+    <!-- Loads <model-viewer> for browsers: -->
+    <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+    <script>
+        /*Part of the code in JQuery through which the navigation bar appears or not with background, 
+        depending on where we are. If we are at the top of the page, the background of the navigation 
+        bar does not appear*/
+      $(window).scroll(function () {
+        if ($(document).scrollTop() > 50) {
+          $('.nav').addClass('affix');
+          console.log("OK");
+        } else {
+          $('.nav').removeClass('affix');
+        }
+      });
+    </script>
+    <script>
+        /*Part of the code in JQuery through which, if we are in a viewport with a small width, we will have a 
+        hamburger button, which if clicked will show a navigation bar.*/
+      $('.navTrigger').click(function () {
+        $(this).toggleClass('active');
+        console.log("Clicked menu");
+        $("#mainListDiv").toggleClass("show_list");
+        $("#mainListDiv").fadeIn();
+
+      });
+    </script>
+</body>
+
+</html>

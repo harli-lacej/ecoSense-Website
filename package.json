@@ -1,0 +1,24 @@
+{
+  "name": "ecosense-website",
+  "version": "1.0.0",
+  "main": "animation.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/harli-lacej/ecoSense-Website.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/harli-lacej/ecoSense-Website/issues"
+  },
+  "homepage": "https://github.com/harli-lacej/ecoSense-Website#readme",
+  "devDependencies": {
+    "bulma": "^0.9.4",
+    "node-sass": "^7.0.3"
+  },
+  "keywords": [],
+  "description": ""
+}

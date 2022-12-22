@@ -1,60 +1,178 @@
+<!--ecoSense homepage, main page layout with basic information about ecoSense-->
+<!--Project:ecoSense - Website-->
+<!--Author:Harli Laçej-->
+<!--Date: 26/10/2022-->
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+    <!--Setting the title, meta data and linking to external CSS or importing JavaScript or FontAwesome-->
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="description" content="ecoSense - Temperature and power consumption mesasurement system">
     <meta name="keywords" content="ecoSense,temperature,power,measure,chatbot,system">
     <meta name="author" content="Harli Laçej">
-    <meta name="viewport" content="initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no, width=device-width, height=device-height, target-densitydpi=device-dpi">
+    <meta name="viewport"
+        content="initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no, width=device-width, height=device-height, target-densitydpi=device-dpi">
     <link rel="icon" href="images/ecosense_logo.png" type="image/x-icon">
     <link rel="stylesheet" href="main.css">
     <link rel="stylesheet" href="animation.css">
     <link rel="stylesheet" href="locomotivescroll.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"
+        integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <link href='https://fonts.googleapis.com/css?family=Montserrat:500,400,300' rel='stylesheet'>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.0/dist/locomotive-scroll.css"> 
-    <title>ecoSense</title>
+    <script src="https://kit.fontawesome.com/1ae57ee07b.js" crossorigin="anonymous"></script>
+    <title>ecoSense - eco & smart</title>
 </head>
+
 <body>
+    <!--Creating the body, which has the basic structure of the page-->
+    <!--Creating a div that contains the ecoSense logo in SVG format, the logo is animated.-->
     <div class="loader-wrapper">
-        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="30%" zoomAndPan="magnify" viewBox="0 0 1134 567.000005" height="567" preserveAspectRatio="xMidYMid meet" version="1.0"><defs><g></g><clipPath id="823152f0f4"><path d="M 13.898438 34.28125 L 545.460938 34.28125 L 545.460938 554.613281 L 13.898438 554.613281 Z M 13.898438 34.28125 " clip-rule="nonzero" class="svg-elem-1"></path></clipPath></defs><g clip-path="url(#823152f0f4)"><path fill="#abc966" d="M 279.867188 34.636719 C 421.59375 34.636719 537.394531 145.375 545.363281 284.917969 L 412.054688 170.820312 L 201.207031 351.273438 L 201.207031 554.253906 C 92.699219 520.742188 13.8125 419.753906 13.8125 300.386719 C 13.8125 153.667969 132.984375 34.636719 279.867188 34.636719 Z M 279.867188 34.636719 " fill-opacity="1" fill-rule="evenodd" class="svg-elem-2"></path></g><g fill="#abc966" fill-opacity="1"><g transform="translate(206.357284, 549.615809)"><g><path d="M 114.421875 -52.203125 C 114.421875 -82.25 92.460938 -106.90625 60.484375 -106.90625 C 29.664062 -106.90625 6.550781 -83.214844 6.550781 -52.007812 C 6.550781 -20.804688 29.855469 3.082031 60.484375 3.082031 C 84.753906 3.082031 104.597656 -11.363281 112.109375 -34.09375 L 82.636719 -34.09375 C 78.398438 -26.582031 70.308594 -21.960938 60.484375 -21.960938 C 46.808594 -21.960938 37.5625 -29.855469 35.058594 -44.113281 L 113.84375 -44.113281 C 114.226562 -46.808594 114.421875 -49.503906 114.421875 -52.203125 Z M 60.484375 -82.828125 C 73.199219 -82.828125 82.25 -75.894531 86.296875 -63.179688 L 35.828125 -63.179688 C 39.101562 -75.507812 47.964844 -82.828125 60.484375 -82.828125 Z M 60.484375 -82.828125 " class="svg-elem-3"></path></g></g></g><g fill="#abc966" fill-opacity="1"><g transform="translate(323.467089, 549.615809)"><g><path d="M 61.832031 3.082031 C 88.992188 3.082031 110.375 -14.640625 115.191406 -40.835938 L 86.875 -40.835938 C 82.058594 -29.664062 73.199219 -23.5 61.832031 -23.5 C 46.808594 -23.5 35.058594 -36.019531 35.058594 -52.007812 C 35.058594 -68.191406 46.617188 -80.519531 61.832031 -80.519531 C 73.003906 -80.519531 82.445312 -74.355469 86.875 -64.144531 L 114.804688 -64.144531 C 109.796875 -89.765625 88.992188 -106.90625 62.027344 -106.90625 C 30.433594 -106.90625 6.550781 -83.40625 6.550781 -52.203125 C 6.550781 -20.996094 30.433594 3.082031 61.832031 3.082031 Z M 61.832031 3.082031 " class="svg-elem-4"></path></g></g></g><g fill="#abc966" fill-opacity="1"><g transform="translate(439.999054, 549.615809)"><g><path d="M 62.796875 3.082031 C 94.964844 3.082031 119.042969 -20.609375 119.042969 -52.007812 C 119.042969 -83.40625 94.964844 -106.90625 62.796875 -106.90625 C 30.628906 -106.90625 6.550781 -83.40625 6.550781 -52.007812 C 6.550781 -20.609375 30.628906 3.082031 62.796875 3.082031 Z M 62.796875 -23.5 C 46.617188 -23.5 35.058594 -35.058594 35.058594 -52.007812 C 35.058594 -68.769531 46.617188 -80.519531 62.796875 -80.519531 C 78.976562 -80.519531 90.535156 -68.769531 90.535156 -52.007812 C 90.535156 -35.058594 78.976562 -23.5 62.796875 -23.5 Z M 62.796875 -23.5 " class="svg-elem-5"></path></g></g></g><g fill="#abc966" fill-opacity="1"><g transform="translate(561.924196, 549.615809)"><g><path d="M 60.097656 2.695312 C 88.03125 2.695312 111.144531 -11.363281 111.144531 -40.453125 C 111.144531 -70.695312 85.332031 -77.050781 64.914062 -82.25 C 50.46875 -85.71875 38.910156 -88.609375 38.910156 -98.046875 C 38.910156 -106.90625 48.347656 -110.953125 57.789062 -110.953125 C 68.769531 -110.953125 78.398438 -105.558594 78.398438 -93.808594 L 107.101562 -93.808594 C 107.101562 -120.777344 89.570312 -137.34375 58.558594 -137.34375 C 28.703125 -137.34375 9.632812 -122.703125 9.632812 -96.890625 C 9.632812 -67.804688 34.289062 -61.832031 54.707031 -56.824219 C 69.34375 -53.550781 81.671875 -50.660156 81.671875 -40.066406 C 81.671875 -30.050781 70.886719 -24.269531 59.90625 -24.269531 C 47.964844 -24.269531 37.175781 -30.628906 37.175781 -43.535156 L 7.703125 -43.535156 C 7.703125 -14.640625 29.085938 2.695312 60.097656 2.695312 Z M 60.097656 2.695312 " class="svg-elem-6"></path></g></g></g><g fill="#abc966" fill-opacity="1"><g transform="translate(677.300428, 549.615809)"><g><path d="M 114.421875 -52.203125 C 114.421875 -82.25 92.460938 -106.90625 60.484375 -106.90625 C 29.664062 -106.90625 6.550781 -83.214844 6.550781 -52.007812 C 6.550781 -20.804688 29.855469 3.082031 60.484375 3.082031 C 84.753906 3.082031 104.597656 -11.363281 112.109375 -34.09375 L 82.636719 -34.09375 C 78.398438 -26.582031 70.308594 -21.960938 60.484375 -21.960938 C 46.808594 -21.960938 37.5625 -29.855469 35.058594 -44.113281 L 113.84375 -44.113281 C 114.226562 -46.808594 114.421875 -49.503906 114.421875 -52.203125 Z M 60.484375 -82.828125 C 73.199219 -82.828125 82.25 -75.894531 86.296875 -63.179688 L 35.828125 -63.179688 C 39.101562 -75.507812 47.964844 -82.828125 60.484375 -82.828125 Z M 60.484375 -82.828125 " class="svg-elem-7"></path></g></g></g><g fill="#abc966" fill-opacity="1"><g transform="translate(794.410251, 549.615809)"><g><path d="M 72.621094 -106.328125 C 58.558594 -106.328125 46.039062 -100.359375 38.140625 -91.113281 L 32.746094 -104.019531 L 13.484375 -104.019531 L 13.484375 0 L 41.605469 0 L 41.605469 -54.511719 C 41.605469 -71.273438 50.46875 -81.671875 64.914062 -81.671875 C 77.050781 -81.671875 83.023438 -74.160156 83.023438 -58.367188 L 83.023438 0 L 111.144531 0 L 111.144531 -62.988281 C 111.144531 -89.378906 96.3125 -106.328125 72.621094 -106.328125 Z M 72.621094 -106.328125 " class="svg-elem-8"></path></g></g></g><g fill="#abc966" fill-opacity="1"><g transform="translate(914.024057, 549.615809)"><g><path d="M 50.277344 3.082031 C 76.664062 3.082031 94 -10.785156 94 -31.976562 C 94 -57.402344 72.234375 -60.871094 55.285156 -63.953125 C 44.496094 -65.878906 35.636719 -67.613281 35.636719 -74.546875 C 35.636719 -80.519531 40.835938 -84.371094 49.503906 -84.371094 C 59.328125 -84.371094 65.109375 -80.324219 65.300781 -72.042969 L 92.074219 -72.042969 C 91.882812 -92.847656 75.316406 -106.90625 50.277344 -106.90625 C 25.234375 -106.90625 8.476562 -93.230469 8.476562 -73.582031 C 8.476562 -49.121094 29.664062 -44.6875 46.230469 -41.800781 C 57.210938 -40.066406 66.261719 -37.949219 66.261719 -30.820312 C 66.261719 -23.886719 59.136719 -20.226562 51.429688 -20.226562 C 41.414062 -20.226562 34.289062 -24.847656 34.09375 -34.09375 L 6.742188 -34.09375 C 6.742188 -11.941406 24.269531 3.082031 50.277344 3.082031 Z M 50.277344 3.082031 " class="svg-elem-9"></path></g></g></g><g fill="#abc966" fill-opacity="1"><g transform="translate(1011.294366, 549.615809)"><g><path d="M 114.421875 -52.203125 C 114.421875 -82.25 92.460938 -106.90625 60.484375 -106.90625 C 29.664062 -106.90625 6.550781 -83.214844 6.550781 -52.007812 C 6.550781 -20.804688 29.855469 3.082031 60.484375 3.082031 C 84.753906 3.082031 104.597656 -11.363281 112.109375 -34.09375 L 82.636719 -34.09375 C 78.398438 -26.582031 70.308594 -21.960938 60.484375 -21.960938 C 46.808594 -21.960938 37.5625 -29.855469 35.058594 -44.113281 L 113.84375 -44.113281 C 114.226562 -46.808594 114.421875 -49.503906 114.421875 -52.203125 Z M 60.484375 -82.828125 C 73.199219 -82.828125 82.25 -75.894531 86.296875 -63.179688 L 35.828125 -63.179688 C 39.101562 -75.507812 47.964844 -82.828125 60.484375 -82.828125 Z M 60.484375 -82.828125 " class="svg-elem-10"></path></g></g></g></svg>
+    <!--***************************************************
+    * Generated by SVG Artista on 10/9/2022, 12:05:55 PM
+    * MIT license (https://opensource.org/licenses/MIT)
+    * Link: https://svgartista.net
+    **************************************************-->
+        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="30%"
+            zoomAndPan="magnify" viewBox="0 0 1134 567.000005" height="567" preserveAspectRatio="xMidYMid meet"
+            version="1.0">
+            <defs>
+                <g></g>
+                <clipPath id="823152f0f4">
+                    <path
+                        d="M 13.898438 34.28125 L 545.460938 34.28125 L 545.460938 554.613281 L 13.898438 554.613281 Z M 13.898438 34.28125 "
+                        clip-rule="nonzero" class="svg-elem-1"></path>
+                </clipPath>
+            </defs>
+            <g clip-path="url(#823152f0f4)">
+                <path fill="#abc966"
+                    d="M 279.867188 34.636719 C 421.59375 34.636719 537.394531 145.375 545.363281 284.917969 L 412.054688 170.820312 L 201.207031 351.273438 L 201.207031 554.253906 C 92.699219 520.742188 13.8125 419.753906 13.8125 300.386719 C 13.8125 153.667969 132.984375 34.636719 279.867188 34.636719 Z M 279.867188 34.636719 "
+                    fill-opacity="1" fill-rule="evenodd" class="svg-elem-2"></path>
+            </g>
+            <g fill="#abc966" fill-opacity="1">
+                <g transform="translate(206.357284, 549.615809)">
+                    <g>
+                        <path
+                            d="M 114.421875 -52.203125 C 114.421875 -82.25 92.460938 -106.90625 60.484375 -106.90625 C 29.664062 -106.90625 6.550781 -83.214844 6.550781 -52.007812 C 6.550781 -20.804688 29.855469 3.082031 60.484375 3.082031 C 84.753906 3.082031 104.597656 -11.363281 112.109375 -34.09375 L 82.636719 -34.09375 C 78.398438 -26.582031 70.308594 -21.960938 60.484375 -21.960938 C 46.808594 -21.960938 37.5625 -29.855469 35.058594 -44.113281 L 113.84375 -44.113281 C 114.226562 -46.808594 114.421875 -49.503906 114.421875 -52.203125 Z M 60.484375 -82.828125 C 73.199219 -82.828125 82.25 -75.894531 86.296875 -63.179688 L 35.828125 -63.179688 C 39.101562 -75.507812 47.964844 -82.828125 60.484375 -82.828125 Z M 60.484375 -82.828125 "
+                            class="svg-elem-3"></path>
+                    </g>
+                </g>
+            </g>
+            <g fill="#abc966" fill-opacity="1">
+                <g transform="translate(323.467089, 549.615809)">
+                    <g>
+                        <path
+                            d="M 61.832031 3.082031 C 88.992188 3.082031 110.375 -14.640625 115.191406 -40.835938 L 86.875 -40.835938 C 82.058594 -29.664062 73.199219 -23.5 61.832031 -23.5 C 46.808594 -23.5 35.058594 -36.019531 35.058594 -52.007812 C 35.058594 -68.191406 46.617188 -80.519531 61.832031 -80.519531 C 73.003906 -80.519531 82.445312 -74.355469 86.875 -64.144531 L 114.804688 -64.144531 C 109.796875 -89.765625 88.992188 -106.90625 62.027344 -106.90625 C 30.433594 -106.90625 6.550781 -83.40625 6.550781 -52.203125 C 6.550781 -20.996094 30.433594 3.082031 61.832031 3.082031 Z M 61.832031 3.082031 "
+                            class="svg-elem-4"></path>
+                    </g>
+                </g>
+            </g>
+            <g fill="#abc966" fill-opacity="1">
+                <g transform="translate(439.999054, 549.615809)">
+                    <g>
+                        <path
+                            d="M 62.796875 3.082031 C 94.964844 3.082031 119.042969 -20.609375 119.042969 -52.007812 C 119.042969 -83.40625 94.964844 -106.90625 62.796875 -106.90625 C 30.628906 -106.90625 6.550781 -83.40625 6.550781 -52.007812 C 6.550781 -20.609375 30.628906 3.082031 62.796875 3.082031 Z M 62.796875 -23.5 C 46.617188 -23.5 35.058594 -35.058594 35.058594 -52.007812 C 35.058594 -68.769531 46.617188 -80.519531 62.796875 -80.519531 C 78.976562 -80.519531 90.535156 -68.769531 90.535156 -52.007812 C 90.535156 -35.058594 78.976562 -23.5 62.796875 -23.5 Z M 62.796875 -23.5 "
+                            class="svg-elem-5"></path>
+                    </g>
+                </g>
+            </g>
+            <g fill="#abc966" fill-opacity="1">
+                <g transform="translate(561.924196, 549.615809)">
+                    <g>
+                        <path
+                            d="M 60.097656 2.695312 C 88.03125 2.695312 111.144531 -11.363281 111.144531 -40.453125 C 111.144531 -70.695312 85.332031 -77.050781 64.914062 -82.25 C 50.46875 -85.71875 38.910156 -88.609375 38.910156 -98.046875 C 38.910156 -106.90625 48.347656 -110.953125 57.789062 -110.953125 C 68.769531 -110.953125 78.398438 -105.558594 78.398438 -93.808594 L 107.101562 -93.808594 C 107.101562 -120.777344 89.570312 -137.34375 58.558594 -137.34375 C 28.703125 -137.34375 9.632812 -122.703125 9.632812 -96.890625 C 9.632812 -67.804688 34.289062 -61.832031 54.707031 -56.824219 C 69.34375 -53.550781 81.671875 -50.660156 81.671875 -40.066406 C 81.671875 -30.050781 70.886719 -24.269531 59.90625 -24.269531 C 47.964844 -24.269531 37.175781 -30.628906 37.175781 -43.535156 L 7.703125 -43.535156 C 7.703125 -14.640625 29.085938 2.695312 60.097656 2.695312 Z M 60.097656 2.695312 "
+                            class="svg-elem-6"></path>
+                    </g>
+                </g>
+            </g>
+            <g fill="#abc966" fill-opacity="1">
+                <g transform="translate(677.300428, 549.615809)">
+                    <g>
+                        <path
+                            d="M 114.421875 -52.203125 C 114.421875 -82.25 92.460938 -106.90625 60.484375 -106.90625 C 29.664062 -106.90625 6.550781 -83.214844 6.550781 -52.007812 C 6.550781 -20.804688 29.855469 3.082031 60.484375 3.082031 C 84.753906 3.082031 104.597656 -11.363281 112.109375 -34.09375 L 82.636719 -34.09375 C 78.398438 -26.582031 70.308594 -21.960938 60.484375 -21.960938 C 46.808594 -21.960938 37.5625 -29.855469 35.058594 -44.113281 L 113.84375 -44.113281 C 114.226562 -46.808594 114.421875 -49.503906 114.421875 -52.203125 Z M 60.484375 -82.828125 C 73.199219 -82.828125 82.25 -75.894531 86.296875 -63.179688 L 35.828125 -63.179688 C 39.101562 -75.507812 47.964844 -82.828125 60.484375 -82.828125 Z M 60.484375 -82.828125 "
+                            class="svg-elem-7"></path>
+                    </g>
+                </g>
+            </g>
+            <g fill="#abc966" fill-opacity="1">
+                <g transform="translate(794.410251, 549.615809)">
+                    <g>
+                        <path
+                            d="M 72.621094 -106.328125 C 58.558594 -106.328125 46.039062 -100.359375 38.140625 -91.113281 L 32.746094 -104.019531 L 13.484375 -104.019531 L 13.484375 0 L 41.605469 0 L 41.605469 -54.511719 C 41.605469 -71.273438 50.46875 -81.671875 64.914062 -81.671875 C 77.050781 -81.671875 83.023438 -74.160156 83.023438 -58.367188 L 83.023438 0 L 111.144531 0 L 111.144531 -62.988281 C 111.144531 -89.378906 96.3125 -106.328125 72.621094 -106.328125 Z M 72.621094 -106.328125 "
+                            class="svg-elem-8"></path>
+                    </g>
+                </g>
+            </g>
+            <g fill="#abc966" fill-opacity="1">
+                <g transform="translate(914.024057, 549.615809)">
+                    <g>
+                        <path
+                            d="M 50.277344 3.082031 C 76.664062 3.082031 94 -10.785156 94 -31.976562 C 94 -57.402344 72.234375 -60.871094 55.285156 -63.953125 C 44.496094 -65.878906 35.636719 -67.613281 35.636719 -74.546875 C 35.636719 -80.519531 40.835938 -84.371094 49.503906 -84.371094 C 59.328125 -84.371094 65.109375 -80.324219 65.300781 -72.042969 L 92.074219 -72.042969 C 91.882812 -92.847656 75.316406 -106.90625 50.277344 -106.90625 C 25.234375 -106.90625 8.476562 -93.230469 8.476562 -73.582031 C 8.476562 -49.121094 29.664062 -44.6875 46.230469 -41.800781 C 57.210938 -40.066406 66.261719 -37.949219 66.261719 -30.820312 C 66.261719 -23.886719 59.136719 -20.226562 51.429688 -20.226562 C 41.414062 -20.226562 34.289062 -24.847656 34.09375 -34.09375 L 6.742188 -34.09375 C 6.742188 -11.941406 24.269531 3.082031 50.277344 3.082031 Z M 50.277344 3.082031 "
+                            class="svg-elem-9"></path>
+                    </g>
+                </g>
+            </g>
+            <g fill="#abc966" fill-opacity="1">
+                <g transform="translate(1011.294366, 549.615809)">
+                    <g>
+                        <path
+                            d="M 114.421875 -52.203125 C 114.421875 -82.25 92.460938 -106.90625 60.484375 -106.90625 C 29.664062 -106.90625 6.550781 -83.214844 6.550781 -52.007812 C 6.550781 -20.804688 29.855469 3.082031 60.484375 3.082031 C 84.753906 3.082031 104.597656 -11.363281 112.109375 -34.09375 L 82.636719 -34.09375 C 78.398438 -26.582031 70.308594 -21.960938 60.484375 -21.960938 C 46.808594 -21.960938 37.5625 -29.855469 35.058594 -44.113281 L 113.84375 -44.113281 C 114.226562 -46.808594 114.421875 -49.503906 114.421875 -52.203125 Z M 60.484375 -82.828125 C 73.199219 -82.828125 82.25 -75.894531 86.296875 -63.179688 L 35.828125 -63.179688 C 39.101562 -75.507812 47.964844 -82.828125 60.484375 -82.828125 Z M 60.484375 -82.828125 "
+                            class="svg-elem-10"></path>
+                    </g>
+                </g>
+            </g>
+        </svg>
     </div>
+
     <script>
-        $(window).on("load",function(){
+        //A code that serves to display a certain div and then not to display it with it.
+        $(window).on("load", function () {
             $(".loader-wrapper").show("slow").delay(3000).fadeOut(800);
 
         })
-
     </script>
-    <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.0/dist/locomotive-scroll.min.js"></script>
-    <script>
-        import LocomotiveScroll from 'locomotive-scroll';
 
-const scroll = new LocomotiveScroll({
-    el: document.querySelector('[data-scroll-container]'),
-    smooth: true
-});
-console.log("ya")
-    </script>
-    
-    <div class="main">
-        <div class="nav-bar">
-            <a href="index.html" class="nav-elem-1"><img class="image-logo" src="images/navigation-bar-logo.png" alt="Image" width="100px" height="45px"></a>
-            <p class="nav-elem-first"><a class="links-nav" href="index.html">Home</p>
-            <p class="nav-elem"><a class="links-nav" href="index.html">Product</a></p>
-            <p class="nav-elem"><a class="links-nav" href="index.html">About us</a></p>
-            <p class="nav-elem"><a class="links-nav" href="contact.html">Contact</a></p>
-            <button type="button" class="nav-elem-last"><a href="signup.php">Sign In</a></button>
+    <section class="showcase">
+        <!--Section, in which the video, navigation bar and an animation with the scoSense slogan will be placed-->
+
+        <div class="video-container">
+            <!--Div in which the large video will be placed-->
+            <video src="video.mp4" autoplay muted loop></video>
         </div>
-        <div class="header">
+        <nav class="nav">
+            <!--The div in which the navigation bar is placed, which is responsive.-->
+            <div class="container">
+                <div class="logo">
+                    <a href="#"><img src="images/navigation-bar-logo.png" width="100" height="50"></a>
+                </div>
+                <div id="mainListDiv" class="main_list">
+                    <ul class="navlinks">
+                        <li><a style="size:15;" href="index.html">Home</a></li>
+                        <li><a style="size:15;" href="model/index2.html">Product</a></li>
+                        <li><a style="size:15;" href="contact.html">Contact</a></li>
+                        <li><a style="size:15;" href="login.php">Log in</a></li>
+                    </ul>
+                </div>
+                <span class="navTrigger">
+                    <i></i>
+                    <i></i>
+                    <i></i>
+                </span>
+            </div>
+        </nav>
+        </div>
+        <div class="content">
+            <!--Setting a title for the page, located above the video, in which there will be an animated slogan, 
+                a short description and a button that will send you to another section-->
             <div id="top">
-                <div class="header-content container p-b-2">
-                    <div class="row bg-white">
-                        <div class="col-md-10 p-t-2 p-b-2">
-                            <h1 class="p-t-2 m-b-3">
-                                <a href="">
-                                    Choose ecoSense.Go
+                <div class="header-content">
+                    <div class="row">
+                        <div class="col">
+                            <h1 id="main-slogan">
+                                <a href="" style="margin-left:-20%;">
+                                    ecoSense.Go
                                     <span class="typing-words">
                                         <span>eco.</span>
                                         <span>smart.</span>
@@ -67,35 +185,128 @@ console.log("ya")
                         </div>
                     </div>
                 </div>
+                <h3>Smart temperature and power measurement system</h3>
+                <a href="#about" class="btn">Read More</a>
             </div>
-            <h3>Smart temperature and power measurement system</h3>
         </div>
-        <div class="learn-more-div">
-        <button class="learn-more-btn">Learn more</button>
-        </div>
-    </div>
-    <div data-scroll-container>
-        <div data-scroll-section>
-            <h1 data-scroll>Hey</h1>
-            <p data-scroll>👋</p>
-        </div>
-        <div data-scroll-section>
-            <h2 data-scroll data-scroll-speed="1">What's up?</h2>
-            <p data-scroll data-scroll-speed="1">😬</p>
-        </div>
-    </div>
 
-    <div class="footer">
-        <div class="footer-git">
-        <a href="https://github.com/harli-lacej/ecoSense-Website" class="footer-git"><img src="images/github-logo.svg" class="svg-color-edit"></a>
+
+    </section>
+    <section id="about">
+        <!--The section in which all the features of the system and illustrative photos are placed-->
+        <h1>What is <b>ecoSense?</b>
+        </h1>
+        <p>
+            Its object is to create a system for measuring the temperature in
+            different positions of the domestic environment as well as measuring
+            the electrical power in electronic devices.
+            Through this system, a reduction in electrical energy consumption and an
+            improvement in the quality of life in indoor environments is achieved.
+        </p>
+
+    </section>
+    <section id="whyus">
+        <h1>Why us?</h1>
+        <h2>Temperature measurement</h2>
+        <p><img src="images/temperature.png" width="168.75" height="120" style='float:right;margin: 0px 0px 15px 20px;'>
+            Through ecoSense, the temperature can be measured very simply.
+            Unlike anyone else, we measure the temperature of bright positions of the house,
+            to offer the most accurate measurement. All data accessible through graphics...
+        </p>
+        <div class="space"></div>
+
+        <h2>Power measurement</h2>
+        <p><img src="images/power.png" width="168.75" height="120" style='float:left;margin: 0px 0px 15px 20px;'>You can
+            very simply measure the consumption of your electrical appliances through ecoSense.
+            This way you can understand which of your devices consume a lot and thus save money.
+        </p>
+        <div class="space"></div>
+
+        <h2>eco & smart home</h2>
+        <p><img src="images/home.png" width="168.75" height="120" style='float:right;margin: 0px 0px 15px 20px;'> eco &
+            smart. Through us, the house turns into an intelligent environment,
+            but also a house that contributes to the protection of the environment.
+            Today's technology creates comfort but also protects the environment.
+        </p>
+        <div class="space"></div>
+
+        <h2>Telegram Chatbot</h2>
+        <p><img src="images/phone.png" width="192.75" height="150" style='float:left;margin: -10\px 0px 15px 20px;'>All
+            the data received can be accessed by the user. Wow! An interactive chatbot to present all the data.
+            The chatbot can use Telegram
+        </p>
+        <div class="space"></div>
+    </section>
+    <section id="poster">
+        <!--Section in which a large illustrative photo related to ecoSense is placed-->
+        <div class="space"></div>
+        <img src="images/poster.png" width="1000" height="1000">
+
+    </section>
+
+
+
+
+
+    <section class="contact-area" id="contact">
+        <!--The section in which a part of the page's footer is placed. There you will 
+            find the logo of ecoSense as well as links that connect the page to github 
+            or the telegram of ecosense
+            Link:https://codepen.io/baahubali92/pen/drrWEB-->
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 offset-lg-3">
+                    <div class="contact-content">
+                        <a href="#"><img src="images/navigation-bar-logo.png" alt="logo" style="margin-left:45%"></a>
+                        <p></p>
+                        <div class="hr"></div>
+                        <br>
+                        <h6 style="text-align: center;margin-top:10px;font-family:'Montserrat';">Street: "Dedë Gjon Luli", No.56, 4001 Shkoder
+                            (Albania)</h6>
+                        <h6 style="text-align:center;font-family:'Montserrat';">+355 676774922</h6>
+                        <div class="contact-social">
+                            <ul>
+                                <li><a class="hover-target" href="https://www.instagram.com/ecosense.al/"><i
+                                            class="fab fa-instagram"></i></a></li>
+                                <li><a class="hover-target" href="https://github.com/harli-lacej/ecoSense-Website"><i
+                                            class="fab fa-github"></i></a></li>
+                                <li><a class="hover-target" href="https://t.me/ecosensedemo_bot"><i
+                                            class="fab fa-telegram"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="footer-insta">
-        <a href="https://www.instagram.com/ecosense.al/" class="footer-insta"><img src="images/insta-logo.svg" class="svg-color-edit"></a>
-        </div>
-        <div class="footer-logo">
-        <img src="images/navigation-bar-logo.png" width="75px" height="35px">
-        </div>
-        <p class="cp-footer">&copy ecoSense 2022 | Follow us :</p>
-    </div>
+    </section>
+    <footer>
+        <!--The div in which the footer of the page is placed, contains text and the logo of ecoSense-->
+        <p style="color:white;font-family:'Montserrat';">Copyright &copy; 2022 <img src="images/navigation-bar-logo.png" alt="logo" height="30"
+                width="100"> All Rights Reserved.</p>
+    </footer>
+
+    </section>
+    <script>
+        /*Part of the code in JQuery through which the navigation bar appears or not with background, 
+        depending on where we are. If we are at the top of the page, the background of the navigation 
+        bar does not appear*/
+        $(window).scroll(function () {
+            if ($(document).scrollTop() > 50) {
+                $('.nav').addClass('affix');
+            } else {
+                $('.nav').removeClass('affix');
+            }
+        });
+    </script>
+    <script>
+        /*Part of the code in JQuery through which, if we are in a viewport with a small width, we will have a 
+        hamburger button, which if clicked will show a navigation bar.*/
+        $('.navTrigger').click(function () {
+            $(this).toggleClass('active');
+            $("#mainListDiv").toggleClass("show_list");
+            $("#mainListDiv").fadeIn();
+
+        });
+    </script>
 </body>
 </html>

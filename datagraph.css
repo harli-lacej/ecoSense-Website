@@ -1,0 +1,17 @@
+/*External CSS,the design for "datagraph.php","data-all.php","data-today.php",
+Project:ecoSense - Website
+Author:Harli Laçej
+Date: 26/10/2022*/
+.div-chart {
+  /*Designing the div where temapature chart is displayed*/
+  margin: auto;
+  width: 60%;
+  padding: 10px;
+  font-family: "Courier New", Courier, monospace;
+  margin-top: 10% !important;
+}
+body {
+  /*Setting the backgorund color and page height of pages mentioned in line 1*/
+  background-color: #2e3b52;
+  height: 100vh;
+}
