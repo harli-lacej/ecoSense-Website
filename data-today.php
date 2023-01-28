@@ -101,14 +101,14 @@ libraries,Bulma or Google Fonts-->
   $dbname     = "2023_EcoSense_DA";
   //connecting through MSQLi
   $conn       = new mysqli($servername, $username, $pass, $dbname);
-  $query = $conn->query("select temperature,time,deviceID from temperature where deviceID=1 and date(time) = curdate() limit 20");
+  $query = $conn->query("select temperature,time,deviceID from Temperatur where deviceID=1 and date(time) = curdate() limit 20");
   //recieving data from sensor with the ID 1 and saving data in an array(no limit set)
   foreach ($query as $data) {
     $temperature[] = $data['temperature'];
     $time[] = $data['time'];
   }
   //recieving data from sensor with the ID 2 and saving data in an array(no limit set)
-  $query = $conn->query("select temperature,time,deviceID from temperature where deviceID=2 and date(time) = curdate() limit 20");
+  $query = $conn->query("select temperature,time,deviceID from Temperatur where deviceID=2 and date(time) = curdate() limit 20");
   foreach ($query as $data) {
     $temperature2[] = $data['temperature'];
   }

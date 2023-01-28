@@ -100,29 +100,29 @@
   $dbname     = "2023_EcoSense_DA";
   //connecting through MSQLi
   $conn       = new mysqli($servername, $username, $pass, $dbname);
-  $query = $conn->query("select temperature,time,deviceID from temperature where deviceID=1");
+  $query = $conn->query("select temperature,time,deviceID from Temperatur# where deviceID=1");
   //recieving data from sensor with the ID 1 and saving data in an array(no limit set)
   foreach ($query as $data) {
     $temperature[] = $data['temperature'];
     $time[] = $data['time'];
   }
   //recieving data from sensor with the ID 2 and saving data in an array(no limit set)
-  $query = $conn->query("select temperature,time,deviceID from temperature where deviceID=2");
+  $query = $conn->query("select temperature,time,deviceID from Temperatur where deviceID=2");
   foreach ($query as $data) {
     $temperature2[] = $data['temperature'];
   }
 
-  $query = $conn->query("select round(avg(temperature),2) from temperature as t;");
+  $query = $conn->query("select round(avg(temperature),2) from Temperatur as t;");
   foreach ($query as $data) {
     $temperature_avg = $data['round(avg(temperature),2)'];
   }
 
-  $query = $conn->query("select round(max(temperature),2) from temperature as t;");
+  $query = $conn->query("select round(max(temperature),2) from Temperatur as t;");
   foreach ($query as $data) {
     $temperature_max = $data['round(max(temperature),2)'];
   }
 
-  $query = $conn->query("select round(min(temperature),2) from temperature as t;");
+  $query = $conn->query("select round(min(temperature),2) from Temperatur as t;");
   foreach ($query as $data) {
     $temperature_min = $data['round(min(temperature),2)'];
   }

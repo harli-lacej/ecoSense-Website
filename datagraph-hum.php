@@ -1,7 +1,7 @@
-<!--The page on which the temperature data will be presented graphically.-->
+<!--The page on which the humidity data will be presented graphically.-->
 <!--Project:ecoSense - Website-->
 <!--Author:Harli Laçej-->
-<!--Date: 26/10/2022-->
+<!--Date: 28/01/2023-->
 <!DOCTYPE html>
 <html lang="en">
 
@@ -20,7 +20,7 @@
   <script src="../js-simple-loader-main/loader.js"></script>
   <link rel="stylesheet" href=".../js-simple-loader-main/index.main" />
 
-  <title>Temperature | Chart</title>
+  <title>Pressure & Humidity | Chart</title>
 </head>
 
 <body>
@@ -42,7 +42,8 @@
     <div id="navbarBasicExample" class="navbar-menu">
       <div class="navbar-start">
         <a class="navbar-item">
-          Temperature data visualization
+          Humidity and air pressure
+           data visualization
         </a>
         <div class="navbar-item has-dropdown is-hoverable">
           <a class="navbar-link">
@@ -51,13 +52,10 @@
 
           <div class="navbar-dropdown">
             <a class="navbar-item" id="nav-today" onclick="myFunction()">
-              Today
+              Air pressure
             </a>
             <a class="navbar-item" id="nav-last" onclick="myFunction2()">
-              Last records
-            </a>
-            <a class="navbar-item" id="nav-all" onclick="myFunction3()">
-              All
+              Humidity
             </a>
           </div>
         </div>
@@ -75,22 +73,19 @@
     </div>
   </nav>
   <script>
-    /*The creation of three simple functions, so that if we click on one of the Dropdown elements of the page,
+  /*The creation of three simple functions, so that if we click on one of the Dropdown elements of the page,
     they will send another page with other graphics.*/
     function myFunction() {
-      window.location.replace("data-today.php");
+      window.location.replace("datagraph-press.php");
     }
 
     function myFunction2() {
-      window.location.replace("datagraph.php");
-    }
-
-    function myFunction3() {
-      window.location.replace("data-all.php");
+      window.location.replace("datagraph-hum.php");
     }
   </script>
 
-  <?php
+
+ <?php
   //Creating the connection between the page and the database to receive the data, with the purpose of creating the graph
   //saving the data for database connection in variables
   $servername = "htl-projekt.com";
@@ -99,61 +94,18 @@
   $dbname     = "2023_EcoSense_DA";
   //connecting through MSQLi
   $conn = new mysqli($servername, $username, $pass, $dbname);
-  $query = $conn->query("select temperature,time,deviceID from Temperatur where deviceID=1 limit 15");
-  //recieving data from sensor with the ID 1 and saving data in an array
+  $query = $conn->query("select time,humidity from Pressure_Humidity limit 15");
+  //recieving data from sensor and saving data in an array
   foreach ($query as $data) {
-    $temperature[] = $data['temperature'];
+    $humidity[] = $data['humidity'];
     $time[] = $data['time'];
   }
-  //recieving data from sensor with the ID 2 and saving data in an array
-  $query = $conn->query("select temperature,time,deviceID from Temperatur where deviceID=2 limit 15");
-  foreach ($query as $data) {
-    $temperature2[] = $data['temperature'];
-  }
-
-    $query = $conn->query("select round(avg(temperature),2) from (select temperature from Temperatur limit 15) as t;");
-    foreach ($query as $data) {
-      $temperature_avg = $data['round(avg(temperature),2)'];
-    }
-
-    $query = $conn->query("select round(max(temperature),2) from (select temperature from Temperatur limit 15) as t;");
-    foreach ($query as $data) {
-      $temperature_max = $data['round(max(temperature),2)'];
-    }
-
-    $query = $conn->query("select round(min(temperature),2) from (select temperature from Temperatur limit 15) as t;");
-    foreach ($query as $data) {
-      $temperature_min = $data['round(min(temperature),2)'];
-    }
-
   ?>
   <!--A div where the chart will be placed-->
   <div class="div-chart">
     <canvas id="myChart"></canvas>
   </div>
-  <div class="columns is-centered  ml-6 mt-6 pr-6">
-  <div class="column has-text-light is-one-quarter has-text-centered">
-    Avg
-    <br>
-    <?php
-    echo $temperature_avg;
-    ?>°C
-  </div>
-  <div class="column has-text-light is-one-quarter has-text-centered">
-    Max
-    <br>
-  <?php
-    echo $temperature_max;
-    ?>°C
-  </div>
-  <div class="column has-text-light is-one-quarter has-text-centered">
-    Min
-    <br>
-  <?php
-    echo $temperature_min;
-    ?>°C
-  </div>
-</div>
+
   <script>
     //Chart creation and configuration.
     var ctx = document.getElementById('myChart').getContext('2d');
@@ -162,19 +114,10 @@
       data: {
         labels: <?php echo json_encode($time) ?>,
         datasets: [{
-            label: 'DeviceID 1',
+            label: 'Humidity (in %)',
             backgroundColor: 'rgb(171, 201, 100,0.1)',
             borderColor: 'rgb(171, 201, 100)',
-            data: <?php echo json_encode($temperature) ?>,
-            pointStyle: 'circle',
-            pointRadius: 5,
-            pointHoverRadius: 10
-          },
-          {
-            label: 'DeviceID 2',
-            backgroundColor: 'rgb(230, 115, 107,0.1)',
-            borderColor: 'rgb(230, 115, 107)',
-            data: <?php echo json_encode($temperature2) ?>,
+            data: <?php echo json_encode($humidity) ?>,
             pointStyle: 'circle',
             pointRadius: 5,
             pointHoverRadius: 10

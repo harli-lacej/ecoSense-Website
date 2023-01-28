@@ -61,7 +61,7 @@
     $servername = "htl-projekt.com";
     $username   = "harlilacej";
     $pass   = "!Insy_2021$";
-    $dbname     = "2023_5ay_harlilacej_ecoSense_tempeature";
+    $dbname     = "2023_EcoSense_DA";
     //connecting through MSQLi 
     $conn = new mysqli($servername, $username, $pass, $dbname);
     // checking if the connection is ok 
@@ -70,7 +70,7 @@
     }
     //cheking if the written ecoSenseID exists in the database,if yes the user is directed to "dashboard.php"
     //using prepared statements to avoid SQL injections
-    $stmt = $conn->prepare("SELECT ecoSenseID FROM temperature WHERE ecoSenseID = ?");
+    $stmt = $conn->prepare("SELECT ecoSenseID FROM Product_has_ecoSenseID WHERE ecoSenseID = ?");
     $stmt->bind_param("s", $_POST['ecoSenseID']);
     $stmt->execute();
     $stmt->store_result();

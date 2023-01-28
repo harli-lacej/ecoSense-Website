@@ -70,7 +70,7 @@ if ($_SESSION['test'] != "yes") {
       <a href="datagraph.php"><img src="images/graph-img.png" style="border-radius:2%"></a>
     </div>
     <div class="column is-one-third ml-0">
-      <a href="../docs/_build/html/index.html"><img src="images/api-doc-img.png" style="border-radius:2%"></a>
+    <a href="datagraph-hum.php"><img src="images/press_hum.png" style="border-radius:2%"></img></a>
     </div>
   </div>
   <div class="columns is-vcentered is-centered has-shadow pt-0">
@@ -78,7 +78,7 @@ if ($_SESSION['test'] != "yes") {
       <a href="User-Manual-ecoSense-EN.pdf"><img src="images/doc-img.png" style="border-radius:2%"></a>
     </div>
     <div class="column is-one-third">
-      <a href="contact.html"><img src="images/support-img.png" style="border-radius:2%"></img></a>
+      <a href="../docs/_build/html/index.html"><img src="images/api-doc-img.png" style="border-radius:2%"></a>
     </div>
   </div>
 
