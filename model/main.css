@@ -2,6 +2,7 @@
     --ecoSense-green:#abc964;
     --ecosense-dgreen:rgb(48, 199, 140);
     --ecoSense-red:rgb(230, 115, 107);
+    --ecoSense-red-2:rgb(255, 157, 150);
     --ecoSense-orange:rgb(242, 189, 83);
     --ecoSense-grey:rgb(146, 142, 127);
     --background:white;
@@ -23,6 +24,23 @@ body{
     ;
     
 }
+body::-webkit-scrollbar {
+    /*cutomizing the scrollbar in website(1)*/
+      width: 12px;
+    }
+    
+body::-webkit-scrollbar-track {
+    /*cutomizing the scrollbar in website(2)*/
+      background: var(--ecoSense-grey);
+    }
+    
+body::-webkit-scrollbar-thumb {
+    /*cutomizing the scrollbar in website(3)*/
+      background-color: white;
+      border-radius: 10px;
+      border: 3px solid var(--ecoSense-grey);
+      height: 30px;
+    }
 
 .nav {
     width: 100%;
@@ -354,3 +372,83 @@ body{
     padding: 0;
     background-color: #2E3B52;
 }
+/*----------------------------------------------*/
+/*Styling elements of footer of the page(Line 363-440)
+Inspiration-Link:https://codepen.io/baahubali92/pen/drrWEB*/
+.contact-area {
+    border-bottom: 1px solid white;
+  }
+  
+  .contact-content p {
+    font-size: 15px;
+    margin: 30px 0 60px;
+    position: relative;
+  }
+  
+  .contact-content p::after {
+    background: white;
+    bottom: -30px;
+    content: "";
+    height: 1px;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%);
+    width: 80%;
+  }
+  
+  .contact-content h6 {
+    color: white;
+    font-size: 15px;
+    font-weight: 400;
+    margin-bottom: 10px;
+  }
+  
+  .contact-content span {
+    color: white;
+    margin: 0 10px;
+  }
+  
+  .contact-social {
+    margin-top: 30px;
+    margin-left: 45%;
+  }
+  
+  .contact-social > ul {
+    display: inline-flex;
+  }
+  
+  .contact-social ul li a {
+    border: 1px solid white;
+    color: white;
+    display: inline-block;
+    height: 40px;
+    margin: 10px;
+    padding-top: 7px;
+    padding-left: 10px;
+    transition: all 0.4s ease 0s;
+    width: 40px;
+  }
+  
+  .contact-social ul li a:hover {
+    border: 1px solid var(--ecoSense-red);
+    color: var(var(--ecoSense-red));
+  }
+  
+  .contact-content img {
+    max-width: 210px;
+  }
+  
+  .contact-area,
+  footer {
+    background: var(--ecoSense-red);
+  }
+  
+  footer p {
+    padding: 40px 0;
+    text-align: center;
+  }
+  
+  footer img {
+    width: 44px;
+  }
+  /*----------------------------------------------*/

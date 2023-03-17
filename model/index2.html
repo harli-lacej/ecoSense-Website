@@ -24,6 +24,7 @@
   <script language="JavaScript" type="text/javascript" src="/js/jquery-1.2.6.min.js"></script>
   <script language="JavaScript" type="text/javascript" src="/js/jquery-ui-personalized-1.5.2.packed.js"></script>
   <script language="JavaScript" type="text/javascript" src="/js/sprinkle.js"></script>
+  <script src="https://kit.fontawesome.com/1ae57ee07b.js" crossorigin="anonymous"></script>
   <style>
     /*styling for the page,internal CSS*/
     model-viewer {
@@ -31,6 +32,11 @@
       width: 600px;
       height: 500px;
       background-color: #2E3B52;
+      
+    }
+    .sensor-case{
+      width: 500px;
+      height:350px;
       
     }
 
@@ -45,14 +51,21 @@
     }
 
     .info {
-      display: inline-block;
+      position: relative;
       width: 30%;
       height: 600px;
-      left: 50%;
-      position: fixed;
-      top: 20%;
-      padding-left: 30px;
-      padding-top: 10px;
+      margin-top:-48%;
+      margin-left: 55%;
+      background-color: #2E3B52;
+      font-family: 'Open Sans', sans-serif;
+      color: white;
+    }
+    .info-2 {
+      position: relative;
+      width: 30%;
+      height: 600px;
+      margin-top:-10%;
+      margin-left: 55%;
       background-color: #2E3B52;
       font-family: 'Open Sans', sans-serif;
       color: white;
@@ -60,6 +73,12 @@
 
     @media only screen and (max-width: 800px) {
       model-viewer {
+        margin-left: 10%;
+        width: 300px;
+        height: 200px;
+        background-color: #2E3B52;
+      }
+      .sensor-case{
         margin-left: 10%;
         width: 300px;
         height: 200px;
@@ -74,7 +93,20 @@
         height: 600px;
         left: 2%;
         position: fixed;
-        top: 60%;
+        top: 160%;
+        padding-left: 30px;
+        padding-top: 10px;
+        background-color: #2E3B52;
+        font-family: 'Open Sans', sans-serif;
+        color: white;
+      }
+      .info-2 {
+        display: inline-block;
+        width: 90%;
+        height: 600px;
+        left: 2%;
+        position: fixed;
+        top: 180%;
         padding-left: 30px;
         padding-top: 10px;
         background-color: #2E3B52;
@@ -160,17 +192,28 @@
         <img src="https://modelviewer.dev/shared-assets/icons/hand.png">
       </div>
     </model-viewer>
+    <model-viewer class='sensor-case' src="Temperature Cover+Case - Harli Lacej v2.glb" ar ar-modes="webxr scene-viewer quick-look"
+    camera-controls poster="poster-2.png" shadow-intensity="1.14" environment-image="spruit_sunrise_1k_HDR.hdr"
+    exposure="1.19" camera-orbit="0.389deg 157.5deg auto">
+    <div class="progress-bar hide" slot="progress-bar">
+      <div class="update-bar"></div>
+    </div>
+    <button slot="ar-button" id="ar-button">
+      View in your space
+    </button>
+    <div id="ar-prompt">
+      <img src="https://modelviewer.dev/shared-assets/icons/hand.png">
+    </div>
+  </model-viewer>
     <div class="info">
-      <h3>ecoSense - Temperature</h3>
+      <h3>ecoSense - Main unit</h3>
       <br>
       <br>
       <ul>
-        <li class="tick"> &nbsp;It measures the temperature in different positions</li>
-        <li class="tick"> &nbsp;System case made of PLA material</li>
-        <li class="tick"> &nbsp;Data accessible on the website and in the Chatbot for free</li>
-        <li class="tick"> &nbsp;Accurate measurements</li>
+        <li class="tick"> &nbsp;measures the temperature in different positions</li>
+        <li class="tick"> &nbsp;system case made of PLA material</li>
         <li class="tick"> &nbsp;modern design</li>
-        <li class="tick"> &nbsp; simple use</li>
+        <li class="tick"> &nbsp;simple use</li>
       </ul>
       <br>
       <br>
@@ -178,12 +221,27 @@
       <br>
       <br>
       <br>
-      <br>
-      <br>
-      <input type="submit" value="Order now" />
 
     </div>
+    <br>
+    <br>
+    <div class="info-2">
+      <h3>ecoSense - Measurement unit</h3>
+      <br>
+      <br>
+      <ul>
+        <li class="tick"> &nbsp;accurate temperature measurement</li>
+        <li class="tick"> &nbsp;sensor case made of PLA material</li>
+        <li class="tick"> &nbsp;modern design</li>
+        <li class="tick"> &nbsp;MCP9808 temperature sensor</li>
+        <li class="tick"> &nbsp;works through the hot-plug principle</li>
+      </ul>
+      <br>
+      <br>
 
+      <input type="submit" value="Order ecoSense now" />
+
+    </div>
 
 
     <script src="script.js"></script>
